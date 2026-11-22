@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Model & settings | RetenScope</title>
+  <meta name="description" content="RetenScope university customer churn project - simple frontend demo">
+  <link rel="icon" type="image/svg+xml" href="assets/RetenScope_Symbol_Primary.svg">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="app-layout">
+    <!-- Sidebar: normal HTML links, so every page works without JavaScript. -->
+    <aside class="sidebar">
+      <a class="logo" href="index.html">
+        <img src="assets/RetenScope_Symbol_Inverse.svg" alt="RetenScope logo">
+        <span><strong>RetenScope</strong><small>AI RETENTION</small></span>
+      </a>
+      <p class="sidebar-label">WORKSPACE</p>
+      <nav aria-label="Main navigation">
+          <a class="nav-link " href="index.html" ><span>◉</span>Overview</a>
+          <a class="nav-link " href="customers.html" ><span>☷</span>Customers</a>
+          <a class="nav-link " href="customer.html" ><span>◎</span>Customer 360</a>
+          <a class="nav-link " href="explain.html" ><span>✧</span>Explanations</a>
+          <a class="nav-link " href="import.html" ><span>⇧</span>Data Import</a>
+          <a class="nav-link " href="campaigns.html" ><span>▣</span>Campaigns</a>
+          <a class="nav-link " href="new-campaign.html" ><span>＋</span>New Campaign</a>
+          <a class="nav-link " href="outcomes.html" ><span>↗</span>Outcomes</a>
+          <a class="nav-link " href="reports.html" ><span>▥</span>Reports</a>
+          <a class="nav-link active" href="settings.html" aria-current="page"><span>⚙</span>Settings</a>
+      </nav>
+      <div class="sidebar-note"><strong>University project</strong><p>IBM Telco dataset · Research demo</p></div>
+    </aside>
+
+    <main class="main-content">
+      <header class="page-header">
+        <div>
+          <h1>Model & settings</h1>
+          <p>Understand what is implemented now and what comes later.</p>
+        </div>
+        <span class="demo-label">FRONTEND DEMO</span>
+      </header>
+      <div class="page-body">
+
+        <section class="two-columns">
+          <article class="card"><h2>Current model reference</h2><dl class="details"><div><dt>Model</dt><dd>Logistic Regression</dd></div><div><dt>Class weights</dt><dd>Balanced</dd></div><div><dt>Train/test split</dt><dd>80% / 20%</dd></div><div><dt>Status</dt><dd>Research baseline only</dd></div></dl></article>
+          <article class="card"><h2>Planned architecture</h2><dl class="details"><div><dt>Web</dt><dd>HTML · CSS · JavaScript</dd></div><div><dt>Mobile app</dt><dd>Flutter (separate project)</dd></div><div><dt>Backend</dt><dd>ASP.NET Core (future)</dd></div><div><dt>Machine Learning</dt><dd>Python + SHAP (future)</dd></div><div><dt>Database</dt><dd>SQL Server (future)</dd></div></dl></article>
+        </section>
+        <section class="card section-space"><h2>What this frontend can do</h2><p>Show dataset facts, navigate between real HTML pages, filter sample customers, demonstrate an explanation threshold, preview CSV information, and save sample campaigns and outcomes to localStorage.</p><h2 class="section-space">What it cannot do yet</h2><p>Secure authentication, real CRM connections, model inference, real SHAP contributions, automated outreach, or storing data for multiple users on a server.</p></section>
+
+        <footer class="footer">RetenScope · Graduation Project · Some customer and campaign examples are illustrative, not real predictions.</footer>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Model reports | RetenScope</title>
+  <meta name="description" content="RetenScope university customer churn project - simple frontend demo">
+  <link rel="icon" type="image/svg+xml" href="assets/RetenScope_Symbol_Primary.svg">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="app-layout">
+    <!-- Sidebar: normal HTML links, so every page works without JavaScript. -->
+    <aside class="sidebar">
+      <a class="logo" href="index.html">
+        <img src="assets/RetenScope_Symbol_Inverse.svg" alt="RetenScope logo">
+        <span><strong>RetenScope</strong><small>AI RETENTION</small></span>
+      </a>
+      <p class="sidebar-label">WORKSPACE</p>
+      <nav aria-label="Main navigation">
+          <a class="nav-link " href="index.html" ><span>◉</span>Overview</a>
+          <a class="nav-link " href="customers.html" ><span>☷</span>Customers</a>
+          <a class="nav-link " href="customer.html" ><span>◎</span>Customer 360</a>
+          <a class="nav-link " href="explain.html" ><span>✧</span>Explanations</a>
+          <a class="nav-link " href="import.html" ><span>⇧</span>Data Import</a>
+          <a class="nav-link " href="campaigns.html" ><span>▣</span>Campaigns</a>
+          <a class="nav-link " href="new-campaign.html" ><span>＋</span>New Campaign</a>
+          <a class="nav-link " href="outcomes.html" ><span>↗</span>Outcomes</a>
+          <a class="nav-link active" href="reports.html" aria-current="page"><span>▥</span>Reports</a>
+          <a class="nav-link " href="settings.html" ><span>⚙</span>Settings</a>
+      </nav>
+      <div class="sidebar-note"><strong>University project</strong><p>IBM Telco dataset · Research demo</p></div>
+    </aside>
+
+    <main class="main-content">
+      <header class="page-header">
+        <div>
+          <h1>Model reports</h1>
+          <p>Review the baseline model results and their limitations.</p>
+        </div>
+        <span class="demo-label">FRONTEND DEMO</span>
+      </header>
+      <div class="page-body">
+
+        <div class="notice">These statistics are from one preliminary logistic-regression test on the provided phase report; they do not represent a deployed AI service.</div>
+        <section class="kpi-grid">
+          <article class="card kpi"><p>Recall</p><strong>0.786</strong><small>294 of 374 churners detected</small></article>
+          <article class="card kpi"><p>Precision</p><strong class="red-text">0.507</strong><small>About half of alerts were correct</small></article>
+          <article class="card kpi"><p>F1 score</p><strong>0.616</strong><small>Balance of precision and recall</small></article>
+          <article class="card kpi"><p>ROC-AUC</p><strong>0.842</strong><small>Ranking ability of baseline</small></article>
+        </section>
+        <section class="two-columns">
+          <article class="card"><h2>Confusion matrix</h2><p class="subtext">Test set: 1,409 customers</p><div class="confusion-grid"><div class="matrix good"><strong>749</strong><span>True negative</span></div><div class="matrix bad"><strong>286</strong><span>False positive</span></div><div class="matrix bad"><strong>80</strong><span>False negative</span></div><div class="matrix good"><strong>294</strong><span>True positive</span></div></div></article>
+          <article class="card"><h2>How to read the results</h2><p><strong>Recall 78.6%</strong> means the model found 294 out of 374 actual churners in the test data.</p><p><strong>Precision 50.7%</strong> means many customers flagged as churners actually stayed.</p><p class="subtext">The team must consider both when choosing a business threshold.</p></article>
+        </section>
+        <section class="card section-space pale-card"><h2>Research limitations</h2><p>The dataset is a single historical snapshot. We cannot honestly claim to forecast churn within 30 or 60 days. Real-time prediction, model deployment and actual SHAP explanations are future integration work.</p></section>
+
+        <footer class="footer">RetenScope · Graduation Project · Some customer and campaign examples are illustrative, not real predictions.</footer>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

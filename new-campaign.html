@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>New campaign | RetenScope</title>
+  <meta name="description" content="RetenScope university customer churn project - simple frontend demo">
+  <link rel="icon" type="image/svg+xml" href="assets/RetenScope_Symbol_Primary.svg">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="app-layout">
+    <!-- Sidebar: normal HTML links, so every page works without JavaScript. -->
+    <aside class="sidebar">
+      <a class="logo" href="index.html">
+        <img src="assets/RetenScope_Symbol_Inverse.svg" alt="RetenScope logo">
+        <span><strong>RetenScope</strong><small>AI RETENTION</small></span>
+      </a>
+      <p class="sidebar-label">WORKSPACE</p>
+      <nav aria-label="Main navigation">
+          <a class="nav-link " href="index.html" ><span>◉</span>Overview</a>
+          <a class="nav-link " href="customers.html" ><span>☷</span>Customers</a>
+          <a class="nav-link " href="customer.html" ><span>◎</span>Customer 360</a>
+          <a class="nav-link " href="explain.html" ><span>✧</span>Explanations</a>
+          <a class="nav-link " href="import.html" ><span>⇧</span>Data Import</a>
+          <a class="nav-link " href="campaigns.html" ><span>▣</span>Campaigns</a>
+          <a class="nav-link active" href="new-campaign.html" aria-current="page"><span>＋</span>New Campaign</a>
+          <a class="nav-link " href="outcomes.html" ><span>↗</span>Outcomes</a>
+          <a class="nav-link " href="reports.html" ><span>▥</span>Reports</a>
+          <a class="nav-link " href="settings.html" ><span>⚙</span>Settings</a>
+      </nav>
+      <div class="sidebar-note"><strong>University project</strong><p>IBM Telco dataset · Research demo</p></div>
+    </aside>
+
+    <main class="main-content">
+      <header class="page-header">
+        <div>
+          <h1>New campaign</h1>
+          <p>Create a simple draft before taking any real-world action.</p>
+        </div>
+        <span class="demo-label">FRONTEND DEMO</span>
+      </header>
+      <div class="page-body">
+
+        <div class="notice">This form only saves a draft in your own browser. It does not contact customers.</div>
+        <section class="two-columns wide-left">
+          <article class="card"><h2>Campaign details</h2><p class="subtext">Fields marked * must be completed.</p>
+            <form id="campaignForm">
+              <label for="campaignName">Campaign name *</label>
+              <input id="campaignName" name="name" type="text" placeholder="Example: New subscriber care" maxlength="70" required>
+              <label for="campaignOwner">Assigned owner *</label>
+              <input id="campaignOwner" name="owner" type="text" value="Retention analyst" maxlength="50" required>
+              <label for="campaignSegment">Risk segment</label>
+              <select id="campaignSegment" name="segment"><option>High</option><option>Medium</option><option>Low</option></select>
+              <label for="campaignAction">Planned action *</label>
+              <textarea id="campaignAction" name="action" placeholder="Example: call and review the customer's plan" maxlength="250" required></textarea>
+              <label class="check-label"><input type="checkbox" id="campaignReview" required> I understand this is only a demo draft.</label>
+              <button type="submit" class="button primary">Save campaign draft</button>
+              <p id="campaignMessage" class="result-message" aria-live="polite"></p>
+            </form>
+          </article>
+          <aside class="card pale-card"><h2>Before taking action</h2><p>An analyst should:</p><ul class="clean-list"><li>Check the customer information.</li><li>Review the model explanation.</li><li>Confirm customer contact permission.</li><li>Record the action and result.</li></ul><p class="subtext">This page represents the ACT step in Predict → Explain → Act.</p></aside>
+        </section>
+
+        <footer class="footer">RetenScope · Graduation Project · Some customer and campaign examples are illustrative, not real predictions.</footer>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

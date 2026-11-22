@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Retention campaigns | RetenScope</title>
+  <meta name="description" content="RetenScope university customer churn project - simple frontend demo">
+  <link rel="icon" type="image/svg+xml" href="assets/RetenScope_Symbol_Primary.svg">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="app-layout">
+    <!-- Sidebar: normal HTML links, so every page works without JavaScript. -->
+    <aside class="sidebar">
+      <a class="logo" href="index.html">
+        <img src="assets/RetenScope_Symbol_Inverse.svg" alt="RetenScope logo">
+        <span><strong>RetenScope</strong><small>AI RETENTION</small></span>
+      </a>
+      <p class="sidebar-label">WORKSPACE</p>
+      <nav aria-label="Main navigation">
+          <a class="nav-link " href="index.html" ><span>◉</span>Overview</a>
+          <a class="nav-link " href="customers.html" ><span>☷</span>Customers</a>
+          <a class="nav-link " href="customer.html" ><span>◎</span>Customer 360</a>
+          <a class="nav-link " href="explain.html" ><span>✧</span>Explanations</a>
+          <a class="nav-link " href="import.html" ><span>⇧</span>Data Import</a>
+          <a class="nav-link active" href="campaigns.html" aria-current="page"><span>▣</span>Campaigns</a>
+          <a class="nav-link " href="new-campaign.html" ><span>＋</span>New Campaign</a>
+          <a class="nav-link " href="outcomes.html" ><span>↗</span>Outcomes</a>
+          <a class="nav-link " href="reports.html" ><span>▥</span>Reports</a>
+          <a class="nav-link " href="settings.html" ><span>⚙</span>Settings</a>
+      </nav>
+      <div class="sidebar-note"><strong>University project</strong><p>IBM Telco dataset · Research demo</p></div>
+    </aside>
+
+    <main class="main-content">
+      <header class="page-header">
+        <div>
+          <h1>Retention campaigns</h1>
+          <p>Organize ideas that could help the team follow up with customers.</p>
+        </div>
+        <span class="demo-label">FRONTEND DEMO</span>
+      </header>
+      <div class="page-body">
+
+        <div class="notice">Campaigns below are demonstrations. No emails, calls or SMS messages are sent by this website.</div>
+        <div class="section-heading"><div><h2>Campaign board</h2><p class="subtext">Draft → Active → Completed</p></div><a href="new-campaign.html" class="button primary">+ New campaign</a></div>
+        <section class="campaign-grid">
+          <article class="campaign-column"><h2>Draft</h2><div class="campaign-card"><strong>Plan renewal outreach</strong><p>Review monthly plans for high-risk customers.</p><span class="badge medium">DRAFT</span></div><div id="savedCampaigns"></div></article>
+          <article class="campaign-column"><h2>Active · Example</h2><div class="campaign-card"><strong>Welcome care review</strong><p>Support check-in with new subscribers.</p><span class="badge low">ACTIVE · DEMO</span></div></article>
+          <article class="campaign-column"><h2>Completed · Example</h2><div class="campaign-card"><strong>Billing education</strong><p>Help customers understand their charges.</p><span class="badge low">COMPLETED · DEMO</span></div></article>
+        </section>
+        <section class="card section-space"><h2>Why a campaign board?</h2><p>The retention team can immediately see the status of each action. A real application would store this information in a database.</p><a href="outcomes.html" class="button">View recorded outcomes</a></section>
+
+        <footer class="footer">RetenScope · Graduation Project · Some customer and campaign examples are illustrative, not real predictions.</footer>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

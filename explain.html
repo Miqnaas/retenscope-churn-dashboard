@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Explainable AI preview | RetenScope</title>
+  <meta name="description" content="RetenScope university customer churn project - simple frontend demo">
+  <link rel="icon" type="image/svg+xml" href="assets/RetenScope_Symbol_Primary.svg">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="app-layout">
+    <!-- Sidebar: normal HTML links, so every page works without JavaScript. -->
+    <aside class="sidebar">
+      <a class="logo" href="index.html">
+        <img src="assets/RetenScope_Symbol_Inverse.svg" alt="RetenScope logo">
+        <span><strong>RetenScope</strong><small>AI RETENTION</small></span>
+      </a>
+      <p class="sidebar-label">WORKSPACE</p>
+      <nav aria-label="Main navigation">
+          <a class="nav-link " href="index.html" ><span>◉</span>Overview</a>
+          <a class="nav-link " href="customers.html" ><span>☷</span>Customers</a>
+          <a class="nav-link " href="customer.html" ><span>◎</span>Customer 360</a>
+          <a class="nav-link active" href="explain.html" aria-current="page"><span>✧</span>Explanations</a>
+          <a class="nav-link " href="import.html" ><span>⇧</span>Data Import</a>
+          <a class="nav-link " href="campaigns.html" ><span>▣</span>Campaigns</a>
+          <a class="nav-link " href="new-campaign.html" ><span>＋</span>New Campaign</a>
+          <a class="nav-link " href="outcomes.html" ><span>↗</span>Outcomes</a>
+          <a class="nav-link " href="reports.html" ><span>▥</span>Reports</a>
+          <a class="nav-link " href="settings.html" ><span>⚙</span>Settings</a>
+      </nav>
+      <div class="sidebar-note"><strong>University project</strong><p>IBM Telco dataset · Research demo</p></div>
+    </aside>
+
+    <main class="main-content">
+      <header class="page-header">
+        <div>
+          <h1>Explainable AI preview</h1>
+          <p>Help people understand a score instead of showing only a number.</p>
+        </div>
+        <span class="demo-label">FRONTEND DEMO</span>
+      </header>
+      <div class="page-body">
+
+        <div class="notice">The bars below are placeholders to demonstrate an explanation screen. They are not calculated SHAP values.</div>
+        <section class="two-columns">
+          <article class="card dark-card"><p class="label">Demo 001 · Example score</p><strong class="large-score">0.91</strong><p>In the final system, a real ML API would provide the prediction for each customer.</p><span class="badge high">HIGH RISK</span></article>
+          <article class="card"><h2>Possible factors to review</h2><p class="subtext">Visualization sample only.</p>
+            <div class="bar-label"><span>Month-to-month</span><strong>Example</strong></div><div class="bar"><span class="bar-fill red" style="width:84%"></span></div>
+            <div class="bar-label"><span>Short tenure</span><strong>Example</strong></div><div class="bar"><span class="bar-fill red" style="width:76%"></span></div>
+            <div class="bar-label"><span>Electronic check</span><strong>Example</strong></div><div class="bar"><span class="bar-fill red" style="width:48%"></span></div>
+          </article>
+        </section>
+        <section class="two-columns section-space">
+          <article class="card"><h2>What is explainability?</h2><p>Explainable AI helps users understand which input features influenced a model's prediction. A feature influence is not proof of real-world cause.</p></article>
+          <article class="card"><h2>Decision threshold example</h2><p class="subtext">Move the slider to explore a simple classification rule.</p>
+            <label for="threshold">Threshold: <strong id="thresholdValue">50%</strong></label>
+            <input id="threshold" type="range" min="10" max="95" value="50">
+            <p id="thresholdMessage" class="result-message" aria-live="polite">At 50%, this 91% demo score would be flagged for review.</p>
+          </article>
+        </section>
+        <p class="next-line"><a href="new-campaign.html" class="button primary">Continue to retention action</a></p>
+
+        <footer class="footer">RetenScope · Graduation Project · Some customer and campaign examples are illustrative, not real predictions.</footer>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

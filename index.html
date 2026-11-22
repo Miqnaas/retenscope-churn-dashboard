@@ -1,18 +1,94 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#103B36">
-  <meta name="description" content="RetenScope — an explainable AI customer churn and retention management research prototype.">
-  <title>RetenScope | Retention Intelligence</title>
-  <link rel="icon" href="assets/RetenScope_Symbol_Primary.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="assets/brand_tokens.css">
-  <link rel="stylesheet" href="styles.css">
-  <script src="app.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Retention overview | RetenScope</title>
+  <meta name="description" content="RetenScope university customer churn project - simple frontend demo">
+  <link rel="icon" type="image/svg+xml" href="assets/RetenScope_Symbol_Primary.svg">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
-  <div id="app"></div>
-  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <div class="app-layout">
+    <!-- Sidebar: normal HTML links, so every page works without JavaScript. -->
+    <aside class="sidebar">
+      <a class="logo" href="index.html">
+        <img src="assets/RetenScope_Symbol_Inverse.svg" alt="RetenScope logo">
+        <span><strong>RetenScope</strong><small>AI RETENTION</small></span>
+      </a>
+      <p class="sidebar-label">WORKSPACE</p>
+      <nav aria-label="Main navigation">
+          <a class="nav-link active" href="index.html" aria-current="page"><span>◉</span>Overview</a>
+          <a class="nav-link " href="customers.html" ><span>☷</span>Customers</a>
+          <a class="nav-link " href="customer.html" ><span>◎</span>Customer 360</a>
+          <a class="nav-link " href="explain.html" ><span>✧</span>Explanations</a>
+          <a class="nav-link " href="import.html" ><span>⇧</span>Data Import</a>
+          <a class="nav-link " href="campaigns.html" ><span>▣</span>Campaigns</a>
+          <a class="nav-link " href="new-campaign.html" ><span>＋</span>New Campaign</a>
+          <a class="nav-link " href="outcomes.html" ><span>↗</span>Outcomes</a>
+          <a class="nav-link " href="reports.html" ><span>▥</span>Reports</a>
+          <a class="nav-link " href="settings.html" ><span>⚙</span>Settings</a>
+      </nav>
+      <div class="sidebar-note"><strong>University project</strong><p>IBM Telco dataset · Research demo</p></div>
+    </aside>
+
+    <main class="main-content">
+      <header class="page-header">
+        <div>
+          <h1>Retention overview</h1>
+          <p>Understand the dataset before reviewing individual customers.</p>
+        </div>
+        <span class="demo-label">FRONTEND DEMO</span>
+      </header>
+      <div class="page-body">
+
+        <div class="notice">The overall dataset and model statistics below come from the university phase report. Individual customer scores are only examples.</div>
+
+        <!-- KPI means Key Performance Indicator: a small card showing one number. -->
+        <section class="kpi-grid" aria-label="Dataset statistics">
+          <article class="card kpi"><p>Customers</p><strong>7,043</strong><small>IBM Telco sample records</small></article>
+          <article class="card kpi"><p>Observed churn</p><strong class="red-text">26.5%</strong><small>1,869 customers left</small></article>
+          <article class="card kpi"><p>Stayed</p><strong>5,174</strong><small>73.5% of the sample</small></article>
+          <article class="card kpi"><p>ROC-AUC</p><strong>0.842</strong><small>Preliminary ML baseline</small></article>
+        </section>
+
+        <section class="two-columns">
+          <article class="card">
+            <h2>Observed customer status</h2>
+            <p class="subtext">A clear view of the target variable (Churn).</p>
+            <div class="bar-label"><span>Stayed</span><strong>73.5%</strong></div>
+            <div class="bar"><span class="bar-fill green" style="width:73.5%"></span></div>
+            <div class="bar-label"><span>Churned</span><strong>26.5%</strong></div>
+            <div class="bar"><span class="bar-fill red" style="width:26.5%"></span></div>
+          </article>
+          <article class="card">
+            <h2>Groups with higher churn</h2>
+            <p class="subtext">Observed association, not proof of cause.</p>
+            <div class="bar-label"><span>Month-to-month contract</span><strong>42.7%</strong></div>
+            <div class="bar"><span class="bar-fill red" style="width:42.7%"></span></div>
+            <div class="bar-label"><span>Fiber optic</span><strong>41.9%</strong></div>
+            <div class="bar"><span class="bar-fill red" style="width:41.9%"></span></div>
+            <div class="bar-label"><span>Electronic check</span><strong>45.3%</strong></div>
+            <div class="bar"><span class="bar-fill red" style="width:45.3%"></span></div>
+          </article>
+        </section>
+
+        <section class="card section-space">
+          <div class="section-heading"><div><h2>Customers needing review</h2><p class="subtext">Sample records used to show the website's flow.</p></div><a href="customers.html" class="button small">View all customers</a></div>
+          <div class="table-wrapper"><table>
+            <thead><tr><th>Customer</th><th>Contract</th><th>Tenure</th><th>Demo risk</th><th>Action</th></tr></thead>
+            <tbody>
+              <tr><td><a class="text-link" href="customer.html">Demo 001</a></td><td>Month-to-month</td><td>3 months</td><td><span class="badge high">HIGH</span></td><td><a href="customer.html" class="text-link">Review</a></td></tr>
+              <tr><td>Demo 002</td><td>Month-to-month</td><td>7 months</td><td><span class="badge high">HIGH</span></td><td><a href="customer.html" class="text-link">View example</a></td></tr>
+              <tr><td>Demo 003</td><td>One year</td><td>12 months</td><td><span class="badge medium">MEDIUM</span></td><td><a href="customer.html" class="text-link">View example</a></td></tr>
+            </tbody>
+          </table></div>
+        </section>
+
+        <footer class="footer">RetenScope · Graduation Project · Some customer and campaign examples are illustrative, not real predictions.</footer>
+      </div>
+    </main>
+  </div>
 </body>
 </html>

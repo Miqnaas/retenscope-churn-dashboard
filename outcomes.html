@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Campaign outcomes | RetenScope</title>
+  <meta name="description" content="RetenScope university customer churn project - simple frontend demo">
+  <link rel="icon" type="image/svg+xml" href="assets/RetenScope_Symbol_Primary.svg">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="app-layout">
+    <!-- Sidebar: normal HTML links, so every page works without JavaScript. -->
+    <aside class="sidebar">
+      <a class="logo" href="index.html">
+        <img src="assets/RetenScope_Symbol_Inverse.svg" alt="RetenScope logo">
+        <span><strong>RetenScope</strong><small>AI RETENTION</small></span>
+      </a>
+      <p class="sidebar-label">WORKSPACE</p>
+      <nav aria-label="Main navigation">
+          <a class="nav-link " href="index.html" ><span>◉</span>Overview</a>
+          <a class="nav-link " href="customers.html" ><span>☷</span>Customers</a>
+          <a class="nav-link " href="customer.html" ><span>◎</span>Customer 360</a>
+          <a class="nav-link " href="explain.html" ><span>✧</span>Explanations</a>
+          <a class="nav-link " href="import.html" ><span>⇧</span>Data Import</a>
+          <a class="nav-link " href="campaigns.html" ><span>▣</span>Campaigns</a>
+          <a class="nav-link " href="new-campaign.html" ><span>＋</span>New Campaign</a>
+          <a class="nav-link active" href="outcomes.html" aria-current="page"><span>↗</span>Outcomes</a>
+          <a class="nav-link " href="reports.html" ><span>▥</span>Reports</a>
+          <a class="nav-link " href="settings.html" ><span>⚙</span>Settings</a>
+      </nav>
+      <div class="sidebar-note"><strong>University project</strong><p>IBM Telco dataset · Research demo</p></div>
+    </aside>
+
+    <main class="main-content">
+      <header class="page-header">
+        <div>
+          <h1>Campaign outcomes</h1>
+          <p>Record what happened after a retention action.</p>
+        </div>
+        <span class="demo-label">FRONTEND DEMO</span>
+      </header>
+      <div class="page-body">
+
+        <div class="notice">These entries are only local demo notes. They do not establish that a campaign caused a customer to stay.</div>
+        <section class="two-columns wide-left">
+          <article class="card"><h2>Outcome log</h2><p class="subtext">The sample below shows how feedback can be organized.</p>
+            <div class="table-wrapper"><table><thead><tr><th>Customer</th><th>Action</th><th>Outcome</th></tr></thead><tbody id="outcomeTable"><tr><td>Demo 001</td><td>Support call</td><td><span class="badge medium">PENDING</span></td></tr><tr><td>Demo 002</td><td>Offer review</td><td><span class="badge low">ACCEPTED · DEMO</span></td></tr></tbody></table></div>
+          </article>
+          <article class="card"><h2>Add an outcome</h2>
+            <form id="outcomeForm"><label for="outcomeCustomer">Customer ID</label><input id="outcomeCustomer" name="customer" required placeholder="Demo 003" maxlength="50"><label for="outcomeAction">Action</label><input id="outcomeAction" name="action" required placeholder="Support call" maxlength="80"><label for="outcomeStatus">Result</label><select id="outcomeStatus" name="status"><option>Pending</option><option>Accepted</option><option>Declined</option><option>No response</option></select><button type="submit" class="button primary">Save locally</button><p id="outcomeMessage" class="result-message" aria-live="polite"></p></form>
+          </article>
+        </section>
+        <section class="card section-space"><h2>Feedback loop</h2><div class="steps"><span>Predict</span><span>Explain</span><span>Act</span><span>Record outcome</span></div><p class="subtext">Real evaluation needs dated records and trustworthy labels.</p></section>
+
+        <footer class="footer">RetenScope · Graduation Project · Some customer and campaign examples are illustrative, not real predictions.</footer>
+      </div>
+    </main>
+  </div>
+</body>
+</html>
