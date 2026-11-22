@@ -9,6 +9,13 @@ University graduation project: **Customer Churn Prediction and Retention Managem
 
 This version was rebuilt to make the frontend easy for a beginner to read, explain, and extend. It follows the colors and page layout of our Figma RetenScope design.
 
+## Live university frontend demo
+
+**Vercel:** https://retenscope-student-frontend.vercel.app/  
+**Source repo:** https://github.com/Miqnaas/retenscope-churn-dashboard  
+
+This is a static HTML/CSS/JavaScript website linked to the repository's `main` branch; updates to `main` can deploy automatically. No backend or live ML inference is hosted here.
+
 ## How to run
 
 1. Open **`index.html`** in Chrome or Edge. There is no npm, installation or build step.
