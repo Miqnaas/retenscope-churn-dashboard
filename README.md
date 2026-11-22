@@ -1,5 +1,10 @@
 # RetenScope — Simple Student Frontend
 
+> **Independent university submission:** Mohamed Bakr (محمد بكر) — Figma Design & Web Frontend only. This is separate from the [full team project](https://github.com/BaraaEid1098-tech/Telco-Customer-Churn-Project). The backend, model and database are not required to run this static demonstration.
+
+**Discussion resources:** [Scope of submission](SUBMISSION_SCOPE.md) · [Figma + Frontend beginner viva guide (Arabic)](FIGMA_FRONTEND_VIVA_AR.md) · [Original student guide (Arabic)](STUDENT_GUIDE_AR.md)
+
+
 University graduation project: **Customer Churn Prediction and Retention Management**.
 
 This version was rebuilt to make the frontend easy for a beginner to read, explain, and extend. It follows the colors and page layout of our Figma RetenScope design.
